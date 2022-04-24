@@ -13,19 +13,19 @@ This application is used to store various users' account credentials online like
 4. It displays stored credentials.
 5. It deletes your account credentials.
 
-##Set-Up
+###Set-Up
 ***
-First clone this repo:
+**First clone this repo:**
 https://github.com/nealwaga/Password-Locker.git
+---
+**Navigate into the project folder:**
+`$ cd Password-Locker`
+---
+**Install the projects' dependencies from the requirements.txt file:**
+`$ pip install -r requirements.txt`
+---
+**You can now the program by typing the following code in your terminal:**
+`$python3 run.py`
 
-Navigate into the project folder:
-$ cd Password-Locker
-
-Install the projects' dependencies from the requirements.txt file:
-$ pip install -r requirements.txt
-
-You can now the program by typing the following code in your terminal:
-$python3 run.py
-
-##License
+####License
 This software is licensed under the MIT license. Copyright (c) 2022 Neal Waga
