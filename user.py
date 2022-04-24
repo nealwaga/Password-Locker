@@ -8,6 +8,10 @@ class User:
 #saving user
     def save_user (self):
 
-        User.user_list.append (self):
+        User.user_list.append (self)
 
-                
+    def login (self):
+        if User in User.user_list:
+            print (User)
+
+            return User            
