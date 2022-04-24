@@ -28,4 +28,5 @@ https://github.com/nealwaga/Password-Locker.git
 `$python3 run.py`
 ***
 **License**
+---
 This software is licensed under the MIT license. Copyright (c) 2022 Neal Waga
