@@ -1,10 +1,12 @@
 # PASSWORD LOCKER
 
 #Description
+***
 This application is used to store various users' account credentials online like their usernames, emails and passwords.
 **Something to note is that each session is stored in the RAM. So as soon as the application is closed, all data stored is lost.**
 
 ##Specs
+***
 1. It adds users.
 2. It adds users' emails.
 3. It adds users' passwords.
@@ -12,6 +14,7 @@ This application is used to store various users' account credentials online like
 5. It deletes your account credentials.
 
 ##Set-Up
+***
 First clone this repo:
 https://github.com/nealwaga/Password-Locker.git
 
