@@ -12,13 +12,12 @@ class Credential:
         
         
     
-    # savecredential
+# save credential
     def save_credential(self):
         
         Credential.credentials_list.append(self)
         
-    # Delete credentials
-    
+#delete credential  
     def delete_credential(self):
         Credential.credentials_list.remove(self)
         

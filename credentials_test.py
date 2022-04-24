@@ -3,12 +3,12 @@ from credentials import Credential
 
 class TestCredentials(unittest.TestCase):
     def setUp(self):
-        self.new_credential = Credential("Elijah","twitter","euregfj")
+        self.new_credential = Credential("Neal","Reddit","waganealScrumhalf9.")
     
     def test_init(self):
-        self.assertEqual(self.new_credential.username,"Elijah")
-        self.assertEqual(self.new_credential.serviceprovider,"twitter")
-        self.assertEqual(self.new_credential.userpassword,"euregfj")
+        self.assertEqual(self.new_credential.username,"Neal")
+        self.assertEqual(self.new_credential.serviceprovider,"Reddit")
+        self.assertEqual(self.new_credential.userpassword,"waganealScrumhalf9.")
         
     
     # credential save
@@ -20,7 +20,7 @@ class TestCredentials(unittest.TestCase):
         
     def test_save_multiple_credentials(self):
         self.new_credential.save_credential()
-        test_credential = Credential("test","userservice","userp","personalnumber",)
+        test_credential = Credential("Test","Social Network","Password","Number",)
         test_credential.save_credential()
         self.assertEqual(len(Credential.credentials_list))
         
@@ -30,7 +30,7 @@ class TestCredentials(unittest.TestCase):
         
     def test_save_multiple_credentials(self):
         self.new_credential.save_credential()
-        test_credential = Credential("test","userservice","userp","personalnumber",)
+        test_credential = Credential("Test","Social Network","Password","Number",)
         test_credential.save_credential()
         self.assertEqual(len(Credential.credentials_list),2)
         
@@ -38,7 +38,7 @@ class TestCredentials(unittest.TestCase):
         
     def test_delete_credential(self):
         self.new_credential.save_credential()
-        test_credential = Credential("test","userservice","userp","personalnumber",)
+        test_credential = Credential("Test","Social Network","Password","Number",)
         test_credential.save_credential()
         
         self.new_credential.delete_credential()
@@ -48,7 +48,7 @@ class TestCredentials(unittest.TestCase):
         
     def test_find_credential(self):
         self.new_credential.save_credential()
-        test_credential = Credential("test","userservice","userp",)
+        test_credential = Credential("Test","Social Network","Password",)
         test_credential.save_credential()
         
         found_credential = Credential.find_credential("userp")
@@ -59,7 +59,7 @@ class TestCredentials(unittest.TestCase):
         
     def test_credential_exist(self):
         self.new_credential.save_credential()
-        test_credential = Credential("test","userservice","userp")
+        test_credential = Credential("Test","Social Network","Password")
         test_credential.save_credential()
         
         credential_exist = Credential.credential_exist("userp")

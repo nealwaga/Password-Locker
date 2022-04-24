@@ -2,17 +2,16 @@
 from credentials import Credential
 import login
  
-#create credential
-
+#creating credentials
 def create_credentials(usname,sprovider,uspassword):
         new_credential = Credential(usname,sprovider,uspassword)
         return new_credential
 
-# save credential
+#saving credentials
 def save_credentials(credential):
         credential.save_credential()
         
-# delete credential
+#deleting credentials
 def del_credential(credential):
         credential.delete_contact()
         
@@ -25,13 +24,12 @@ def check_exixting_credentials(serviceprovider):
 def  display_credentials():
         return Credential.display_credential()
 
-# main function
-
+#main function
 def main():
-        print("Hi,welcome to our password generator app,")
-        ans=input("would you like to generate a password? y for YES or n for NO:  ")
+        print("Hello there. Welcome to my password locker and generator application,")
+        ans=input("would you like to generate a password? (y for YES or n for NO):  ")
         if ans == "y":
-                status = input("are you a registered user?  y/n?")
+                status = input("Are you a registered user of this application? (y for Yes or n for No)?")
                 if status == "n":
                         login.register()
                         login.Login()
