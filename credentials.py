@@ -1,31 +1,42 @@
 from ast import Delete
 
-class Credentials:
+
+class Credential:
     credentials_list = []
-
-    def __init__(self, user_name, social_networking_service, user_password):
-        self.user_name = user_name
-        self.social_networking_service = social_networking_service
-        self.user_password = user_password
-
-#saving credentials
-    def save_credentials (self):
-        Credentials.credentials_list.append (self)
-
-#deleting credentials
-    def delete_credentials (self):
-        Credentials.credentials_list.remove (self)
-
-#finding credentials
-    @classmethod
-    def find_credentials (cls, social_networking_service):
+    
+    def __init__(self,username,serviceprovider,userpassword):
+        
+        self.username = username
+        self.serviceprovider= serviceprovider
+        self.userpassword= userpassword
+        
+        
+    
+    # savecredential
+    def save_credential(self):
+        
+        Credential.credentials_list.append(self)
+        
+    # Delete credentials
+    
+    def delete_credential(self):
+        Credential.credentials_list.remove(self)
+        
+        # finding a credential
+    @classmethod   
+    def find_credential(cls,serviceprovider):
         for credential in cls.credentials_list:
-            if credential.social_networking_service == social_networking_service:
-                return True
-
-        return False 
-
-#displaying credentials
+            if credential.serviceprovider == serviceprovider:
+                return credential
+            
+            # check if it exist
     @classmethod
-    def display_credentials (cls):
-        return cls.credentials_list                             
+    def credential_exist(cls,serviceprovider):
+        for credential in cls.credentials_list:
+            if credential.serviceprovider == serviceprovider:
+                return True
+        return False
+    
+    @classmethod
+    def display_credential(cls):
+        return cls.credentials_list  
